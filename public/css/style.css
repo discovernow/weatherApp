@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: #445365;
+  font-family: "Baloo Chettan 2", cursive;
+}
+.top-container {
+  background-image: url("img/bg.png");
+  width: 100%;
+  height: 750px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 20px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6% 7%;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.has-text-centered {
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+ul li a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: "Baloo Chettan 2", cursive;
+  color: white;
+}
+#f {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+      background-color: #1b262c;
+      width: 100%;
+      height: 260px;
+}
+.footer_img {
+  width: 50px;
+  margin: 0 17px;
+}
+.footer_img:hover {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 13px 0px #f8ede3;
+  -moz-box-shadow: 0px 0px 13px 0px #f8ede3;
+  box-shadow: 0px 0px 13px 0px #f8ede3;
+}
+.footer_img:last-of-type:hover {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 13px 0px #f8ede3;
+  -moz-box-shadow: 0px 0px 13px 0px #f8ede3;
+  box-shadow: 0px 0px 13px 0px #f8ede3;
+}
+.copyright {
+  position: absolute;
+  bottom: 1%;
+  left: 42%;
+  text-align: center;
+  color: #eaf6f6;
+  font-size: 0.85rem;
+}
+
+.footer-social-icons ul{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.footer-social-icons ul li{
+    margin: 0 15px;
+    list-style: none;
+}
+.footer-social-icons ul li a{
+    position: relative;
+    display: block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: -5s;
+}
+.footer-social-icons ul li a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #11999E;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+.footer-social-icons ul li a:hover:before{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #11999E;
+}
+.footer-social-icons ul li a:hover{
+    color: #11999E;
+    box-shadow: 0 0 5px #11999E;
+    text-shadow: 0 0 5px #11999E;
+}
