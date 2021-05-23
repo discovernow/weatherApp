@@ -3,8 +3,12 @@ const express = require("express");
 const https = require("https");
 const app = express();
 
-app.set('view engine', 'ejs'); 
+//Using EJS
+app.set("view engine", "ejs");
+
+//CSS files
 app.use(express.static("public"));
+
 app.use(
   express.urlencoded({
     extended: true,
@@ -12,9 +16,16 @@ app.use(
 );
 app.use(express.json());
 
+//Home/Main Page
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
+
+//Function to capitalize first letter of a string
+const capitalize = (s) => {
+  if (typeof s !== 'string') return ''
+  return s.charAt(0).toUpperCase() + s.slice(1)
+}
 
 app.post("/", function (req, res) {
   console.log("Post request received for " + req.body.cityName);
@@ -34,21 +45,12 @@ app.post("/", function (req, res) {
         const weatherData = JSON.parse(data);
         const icon = weatherData.weather[0].icon;
         const iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-        res.render('index', {cityName: query, tempCity: weatherData.main.temp, weatherCity: weatherData.weather[0].description, weatherImg: iconURL});
-        // res.write(
-        //   "<h1>Temperature in " +
-        //     query +
-        //     " is " +
-        //     weatherData.main.temp +
-        //     " degree Celcius</h1>"
-        // );
-        // res.write(
-        //   "<h1>Weather condition: " +
-        //     weatherData.weather[0].description +
-        //     "</h1>"
-        // );
-        // res.write("<img src=" + iconURL + "></img>");
-        // res.send();
+        res.render("index", {
+          cityName: capitalize(query),
+          tempCity: weatherData.main.temp,
+          weatherCity: capitalize(weatherData.weather[0].description),
+          weatherImg: iconURL,
+        });
       });
     } else {
       res.sendFile(__dirname + "/failure.html");
@@ -56,6 +58,7 @@ app.post("/", function (req, res) {
   });
 });
 
+//Error page redirecting to retry-home page
 app.post("/failure", function (req, res) {
   res.redirect("/");
 });
