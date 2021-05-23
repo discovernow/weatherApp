@@ -26,7 +26,7 @@ header {
 .has-text-centered {
   text-align: center;
 }
-.image-centered{
+.image-centered {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -47,13 +47,13 @@ ul li a {
   color: white;
 }
 #f {
-    position: fixed;
-    bottom: 0;
-    overflow: hidden;
-    z-index: -1;
-      background-color: #1b262c;
-      width: 100%;
-      height: 260px;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-color: #1b262c;
+  width: 100%;
+  height: 260px;
 }
 .footer_img {
   width: 50px;
@@ -84,50 +84,50 @@ ul li a {
   font-size: 0.85rem;
 }
 
-.footer-social-icons ul{
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%);
+.footer-social-icons ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
 }
-.footer-social-icons ul li{
-    margin: 0 15px;
-    list-style: none;
+.footer-social-icons ul li {
+  margin: 0 15px;
+  list-style: none;
 }
-.footer-social-icons ul li a{
-    position: relative;
-    display: block;
-    width: 70px;
-    height: 70px;
-    text-align: center;
-    line-height: 70px;
-    background: #fff;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #666;
-    transition: -5s;
+.footer-social-icons ul li a {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #666;
+  transition: -5s;
 }
-.footer-social-icons ul li a:before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #11999E;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
+.footer-social-icons ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #11999e;
+  transition: 0.5s;
+  transform: scale(0.9);
+  z-index: -1;
 }
-.footer-social-icons ul li a:hover:before{
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #11999E;
+.footer-social-icons ul li a:hover:before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #11999e;
 }
-.footer-social-icons ul li a:hover{
-    color: #11999E;
-    box-shadow: 0 0 5px #11999E;
-    text-shadow: 0 0 5px #11999E;
+.footer-social-icons ul li a:hover {
+  color: #11999e;
+  box-shadow: 0 0 5px #11999e;
+  text-shadow: 0 0 5px #11999e;
 }
