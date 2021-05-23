@@ -3,6 +3,7 @@ const express = require("express");
 const https = require("https");
 const app = express();
 
+app.set('view engine', 'ejs'); 
 app.use(express.static("public"));
 app.use(
   express.urlencoded({
@@ -33,20 +34,21 @@ app.post("/", function (req, res) {
         const weatherData = JSON.parse(data);
         const icon = weatherData.weather[0].icon;
         const iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-        res.write(
-          "<h1>Temperature in " +
-            query +
-            " is " +
-            weatherData.main.temp +
-            " degree Celcius</h1>"
-        );
-        res.write(
-          "<h1>Weather condition: " +
-            weatherData.weather[0].description +
-            "</h1>"
-        );
-        res.write("<img src=" + iconURL + "></img>");
-        res.send();
+        res.render('index', {cityName: query, tempCity: weatherData.main.temp, weatherCity: weatherData.weather[0].description, weatherImg: iconURL});
+        // res.write(
+        //   "<h1>Temperature in " +
+        //     query +
+        //     " is " +
+        //     weatherData.main.temp +
+        //     " degree Celcius</h1>"
+        // );
+        // res.write(
+        //   "<h1>Weather condition: " +
+        //     weatherData.weather[0].description +
+        //     "</h1>"
+        // );
+        // res.write("<img src=" + iconURL + "></img>");
+        // res.send();
       });
     } else {
       res.sendFile(__dirname + "/failure.html");

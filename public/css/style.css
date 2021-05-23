@@ -26,6 +26,12 @@ header {
 .has-text-centered {
   text-align: center;
 }
+.image-centered{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
 ul {
   list-style: none;
 }
